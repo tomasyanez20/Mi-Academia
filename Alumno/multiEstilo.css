@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(5, 5, 58);
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 6fr 70px;
+    height: 100vh;
+    color: white;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(31, 151, 115);
+    grid-row: 1;
+}
+
+footer {
+    grid-row: 3;
+    background-color: rgb(31, 151, 115);
+    padding: 20px;
+    margin: 0;
+    color: black;
+    text-align: center;
+}
+
+main {
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 20px 40px 5fr 5fr 200px;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 110px;
+    margin-bottom: 30px;
+}
+
+#migas {
+    grid-row: 1;
+    grid-column: 1 /span 2;
+}
+
+h1 {
+    grid-row: 2;
+    grid-column: 1 /span 2;
+    color: white;
+    text-align: center;
+}
+
+#tutoIngles {
+    grid-row: 3;
+    grid-column: 1;
+    border: 1px solid white;
+}
+
+#tutoFrances {
+    grid-row: 3;
+    grid-column: 2;
+    border: 1px solid white;
+}
+
+#tutoItaliano {
+    grid-row: 4;
+    grid-column: 1;
+    border: 1px solid white;
+}
+
+#tutoAleman {
+    grid-row: 4;
+    grid-column: 2;
+    border: 1px solid white;
+}
+
+#audio {
+    grid-row: 5;
+    grid-column: 1/span 2;
+    border: 1px solid white;
+}
+
+.logoAcad {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(5, 5, 58);
+    margin: 0;
+}
+
+.logoAcad:hover {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    margin: 0;
+}
+
+#botonMenu {
+    display: none;
+}
+
+header label,
+.menuContenidos label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+header label:hover {
+    cursor: pointer;
+}
+
+.logoMenu {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+
+/*Menú migas de pan*/
+
+#migas ul {
+    padding: 10px 16px;
+    list-style: none;
+    border-bottom: 3px solid white;
+    margin: 0;
+}
+
+#migas ul li {
+    display: inline;
+    list-style: none;
+    text-decoration: none;
+}
+
+#migas li+li:before {
+    padding: 8px;
+    color: white;
+    content: ">";
+}
+
+#migas a {
+    color: white;
+    text-decoration: none;
+}
+
+#migas a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+h2 {
+    text-align: center;
+}
+
+iframe {
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+    height: 300px;
+    width: 400px;
+    border: 2px solid white;
+}
+
+#a1 {
+    width: 50%;
+    display: block;
+    margin: 10px auto;
+}
+
+
+/* MOVILES-----------------------------------------------------------*/
+
+@media (max-width: 480px) {
+    /*Menu en icono*/
+    header label {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        background-color: rgb(31, 151, 115);
+        z-index: 1;
+        width: 40%;
+        margin-left: -100%;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    #botonMenu:checked~.menu {
+        margin: 0;
+        transition: all 0.5s;
+    }
+    /*RESTO DE ELEMENTOS*/
+    main {
+        grid-row: 2;
+        display: grid;
+        grid-template-rows: 20px 70px 1fr 1fr 1fr 1fr 200px;
+        grid-template-columns: 1;
+        padding: 0;
+        gap: 5px;
+    }
+    #migas {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    h1 {
+        margin-top: 30px;
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 1.3em;
+    }
+    #tutoIngles {
+        grid-row: 3;
+        grid-column: 1;
+        border: 1px solid white;
+    }
+    #tutoFrances {
+        grid-row: 4;
+        grid-column: 1;
+        border: 1px solid white;
+    }
+    #tutoItaliano {
+        grid-row: 5;
+        grid-column: 1;
+        border: 1px solid white;
+    }
+    #tutoAleman {
+        grid-row: 6;
+        grid-column: 1;
+        border: 1px solid white;
+    }
+    #audio {
+        grid-row: 7;
+        grid-column: 1;
+        border: 1px solid white;
+    }
+}
+
+
+/* TABLET-----------------------------------------------------------*/
+
+@media(min-width: 481px) and (max-width: 781px) {
+    main {
+        padding: 0;
+        gap: 5px;
+    }
+}
+
+
+/*PC-----------------------------------------------------------*/
+
+@media(min-width: 781px) {
+    main {
+        gap: 20px;
+        padding: 0 20px;
+    }
+}

@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(5, 5, 58);
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.cajaInicio {
+    width: 420px;
+    height: 520px;
+    background-color: rgb(31, 151, 115);
+    color: black;
+    border: 4px solid white;
+    display: grid;
+    grid-template-rows: 4fr 1fr 2fr 2fr 2fr;
+    gap: 10px;
+}
+
+.imagenLogo {
+    grid-row: 1;
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+    border: 4px solid rgb(5, 5, 58);
+    border-radius: 5px;
+}
+
+h1 {
+    grid-row: 2;
+    color: rgb(5, 5, 58);
+    text-align: center;
+}
+
+#caja1 {
+    grid-row: 3;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#caja2 {
+    grid-row: 4;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+label {
+    color: rgb(5, 5, 58);
+}
+
+input {
+    border: none;
+    border-bottom: 2px solid rgb(5, 5, 58);
+}
+
+#b1 {
+    grid-row: 5;
+    height: 50px;
+    margin: 0 auto;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 1px solid rgb(5, 5, 58);
+}
+
+.cajaInicio button:hover {
+    color: white;
+    background-color: rgb(5, 5, 58);
+    border: 2px solid black;
+    transition: ease-in-out 0.4s;
+}
+
+
+/* MOVILES-----------------------------------------------------------*/
+
+@media (max-width: 480px) {
+    body {
+        justify-content: start;
+    }
+    .cajaInicio {
+        width: 100%;
+        height: 100%;
+    }
+    #caja1 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+    #caja2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin: 0;
+    }
+    label {
+        font-size: 1.4em;
+    }
+    input {
+        height: 3em;
+    }
+}
+
+
+/* TABLET-----------------------------------------------------------*/
+
+@media(min-width: 481px) and (max-width: 781px) {
+    .cajaInicio {
+        width: 100%;
+    }
+}
+
+
+/*PC-----------------------------------------------------------*/
+
+@media(min-width: 781px) {}

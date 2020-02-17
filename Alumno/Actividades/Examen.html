@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="alumnoEstilo.css">
+    <style>
+      
+*{
+  font-family: sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: white;
+  width: 100%;
+  
+}
+th,td{
+  padding: 20px;
+}
+
+thead{
+  background-color: rgb(31, 151, 115);
+  border-bottom: 3px solid black;
+}
+
+tr:nth-child(even){
+  background-color: rgb(223, 213, 213);
+}
+
+#media{
+  font-weight: bold ;
+}
+
+
+
+    </style>
+</head>
+
+    <table class="egt">
+      <thead>
+        <tr>
+          <th>Examen</th>
+          <th>Nota</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Examen 1</td>
+          <td id="1">6</td>
+        </tr>
+        <tr>
+          <td>Examen 2</td>
+          <td id="2">9</td>
+        </tr>
+        <tr id="media">
+          <td>Media Total</td>
+          <td id="mediaNum"></td>
+        </tr>
+      </tbody>    
+      </table>
+      <script>
+        var valor1 = parseInt( document.getElementById("1").innerText);
+        var valor2 = parseInt( document.getElementById("2").innerText);
+   
+        var suma = valor1 + valor2 ;
+
+       var media= (suma) /2;
+       media= Math.round( media * 10) / 10
+
+  
+
+        document.getElementById("mediaNum").innerHTML=media;
+      </script>
+</body>
+</html>

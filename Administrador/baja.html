@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Baja de alumno | MiAcademia</title>
+    <link rel="stylesheet" href="bajaEstilo.css">
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" id="botonMenu">
+        <label for="botonMenu"><img class="logoMenu" src="../imagenes/menu-icono.png" alt="logoMiAcademia"></label>
+        <nav class="menu">
+            <ul>
+                <li><a href="admin.html">Inicio</a></li>
+                <li><a href="alta.html">Alta de alumno</a></li>
+                <li><a href="baja.html">Baja de alumno</a></li>
+                <li><a href="../Inicio/index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <h1>Baja de un alumno</h1>
+        <table id="t1">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido 1</th>
+                    <th>Apellido 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pepe</td>
+                    <td>Jiménez</td>
+                    <td>López</td>
+                </tr>
+                <tr>
+                    <td>Ana</td>
+                    <td>Jer</td>
+                    <td>Lóer</td>
+                </tr>
+                <tr>
+                    <td>Jon</td>
+                    <td>Smith</td>
+                    <td>López</td>
+                </tr>
+                <tr>
+                    <td>Koldo</td>
+                    <td>Vake</td>
+                    <td>Yepez</td>
+                </tr>
+                <tr>
+                    <td>Per</td>
+                    <td>Smith</td>
+                    <td>Yerpez</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="botones">
+            <input type="submit" value="Borrar Alumno">
+        </div>
+    </main>
+    <footer>
+        <address>
+            Mi Academia de idiomas, Calle Madrid, Nº1, 947231232 Burgos.
+        </address>
+    </footer>
+    <script src="libs/jquery.js"></script>
+    <script>
+        $('tr').click(function(event) {
+            $('tr').not(this).removeClass('clicked');
+            $(this).toggleClass('clicked');
+        });
+    </script>
+</body>
+
+</html>

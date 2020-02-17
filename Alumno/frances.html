@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Francés | MiAcademia</title>
+    <link rel="stylesheet" href="idiomaEstilo.css">
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" id="botonMenu">
+        <label for="botonMenu"><img class="logoMenu" src="../imagenes/menu-icono.png" alt="logoMenu"></label>
+        <nav class="menu">
+            <ul>
+                <li>
+                    <a href="alumno.html"><img class="logoAcad" src="../imagenes/logo.png" alt="logoMiAcademia"></a>
+                </li>
+                <li><a href="ingles.html">Inglés</a></li>
+                <li><a href="frances.html">Francés</a></li>
+                <li><a href="aleman.html">Alemán</a></li>
+                <li><a href="italiano.html">Italiano</a></li>
+                <li><a href="multimedia.html">Multimedia</a></li>
+                <li>
+                    <a href="../Inicio/index.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="migas">
+            <ul>
+                <li><a href="alumno.html">Inicio</a></li>
+                <li>Francés</li>
+            </ul>
+        </div>
+
+
+        <h1 id="enc">Comprensión Lectora - Tareas</h1>
+
+        <div class="menuContenidos">
+            <input type="checkbox" id="botonMenu1">
+            <label for="botonMenu1"><img class="logoMenu1" src="../imagenes/menu-icono.png" alt="logoMenu"></label>
+            <ul class="menu1">
+                <li><a>Comprensión lectora</a></li>
+                <ul>
+                    <li><a id="LectoraTarea" href="Actividades/Tareas.html" target="playframe">Tareas</a></li>
+                    <li><a id="LectoraExamen" href="Actividades/Examen.html" target="playframe">Examenes</a></li>
+                </ul>
+                <li><a>Comprensión oral</a></li>
+                <ul>
+                    <li><a id="OralTarea" href="Actividades/Tareas.html" target="playframe">Tareas</a></li>
+                    <li><a id="OralExamen" href="Actividades/Examen.html" target="playframe">Examenes</a></li>
+                </ul>
+                <li><a>Expresión escrita</a></li>
+                <ul>
+                    <li><a id="EscritaTarea" href="Actividades/Tareas.html" target="playframe">Tareas</a></li>
+                    <li><a id="EscritaExamen" href="Actividades/Examen.html" target="playframe">Examenes</a></li>
+                </ul>
+                <li><a>Expresión oral</a></li>
+                <ul>
+                    <li><a id="EsOralTarea" href="Actividades/Tareas.html" target="playframe">Tareas</a></li>
+                    <li><a id="EsOralExamen" href="Actividades/Examen.html" target="playframe">Examenes</a></li>
+                </ul>
+            </ul>
+        </div>
+
+
+        <iframe id="frameResultado" name='playframe' src="Actividades/Tareas.html"></iframe>
+        <p id="resul">Has aprobado, !sigue así¡</p>
+
+
+    </main>
+    <footer>
+        <address>
+            Mi Academia de idiomas, Calle Madrid, Nº1, 947231232 Burgos.
+        </address>
+    </footer>
+
+    <script>
+        document.getElementById("LectoraTarea").addEventListener("click", tareasLect);
+        document.getElementById("LectoraExamen").addEventListener("click", examenesLect);
+        document.getElementById("OralTarea").addEventListener("click", tareasOr);
+        document.getElementById("OralExamen").addEventListener("click", examenesOr);
+        document.getElementById("EscritaTarea").addEventListener("click", tareasEscrita);
+        document.getElementById("EscritaExamen").addEventListener("click", examenesEscrita);
+        document.getElementById("EsOralTarea").addEventListener("click", tareasEOr);
+        document.getElementById("EsOralExamen").addEventListener("click", examenesEOr);
+
+
+        function tareasLect() {
+            document.getElementById("enc").innerHTML = "Comprensión Lectora - Tareas";
+        }
+
+        function examenesLect() {
+            document.getElementById("enc").innerHTML = "Comprensión Lectora - Examenes";
+        }
+
+        function tareasOr() {
+            document.getElementById("enc").innerHTML = "Comprensión Oral - Tareas";
+        }
+
+        function examenesOr() {
+            document.getElementById("enc").innerHTML = "Comprensión Oral - Examenes";
+        }
+
+        function tareasEscrita() {
+            document.getElementById("enc").innerHTML = "Expresión Escrita - Tareas";
+        }
+
+        function examenesEscrita() {
+            document.getElementById("enc").innerHTML = "Expresión Escrita - Examenes";
+        }
+
+        function tareasEOr() {
+            document.getElementById("enc").innerHTML = "Expresión Oral - Tareas";
+        }
+
+        function examenesEOr() {
+            document.getElementById("enc").innerHTML = "Expresión Oral - Examenes";
+        }
+    </script>
+</body>
+
+</html>

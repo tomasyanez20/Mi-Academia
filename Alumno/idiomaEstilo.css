@@ -1,0 +1,293 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(5, 5, 58);
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 6fr 70px;
+    height: 100vh;
+    color: white;
+}
+
+header {
+    width: 100%;
+    background-color: rgb(31, 151, 115);
+    grid-row: 1;
+}
+
+main {
+    grid-row: 2;
+    display: grid;
+    grid-template-rows: 20px 70px 5fr 60px;
+    grid-template-columns: 2fr 6fr;
+    padding: 30px 110px;
+}
+
+#migas {
+    grid-row: 1;
+    grid-column: 1 /span 2;
+}
+
+h1 {
+    grid-row: 2;
+    grid-column: 2 /span 2;
+    color: white;
+    text-align: center;
+}
+
+
+/*Menú lateral*/
+
+.menuContenidos {
+    grid-column: 1;
+    grid-row: 3;
+    width: 200px;
+    text-decoration: none;
+    color: black;
+    background-color: rgb(31, 151, 115);
+}
+
+.menuContenidos ul {
+    text-decoration: none;
+    list-style: none;
+    padding: 0px;
+}
+
+.menuContenidos li {
+    list-style: none;
+    background-color: rgb(31, 151, 115);
+}
+
+.menuContenidos a {
+    display: block;
+    padding: 10px 10px;
+    text-decoration: none;
+}
+
+.menuContenidos a:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#frameResultado {
+    grid-column: 2;
+    grid-row: 3;
+    background-color: white;
+}
+
+#resul {
+    grid-column: 2;
+    grid-row: 4;
+    text-align: center;
+}
+
+footer {
+    grid-row: 3;
+    background-color: rgb(31, 151, 115);
+    padding: 20px;
+    margin: 0;
+    color: black;
+    text-align: center;
+}
+
+.logoAcad {
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgb(5, 5, 58);
+    margin: 0;
+}
+
+.logoAcad:hover {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    margin: 0;
+}
+
+#botonMenu {
+    display: none;
+}
+
+
+/*MENU LATERAL*/
+
+#botonMenu1 {
+    display: none;
+}
+
+header label,
+.menuContenidos label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+header label:hover,
+.menuContenidos label:hover {
+    cursor: pointer;
+}
+
+.logoMenu,
+.logoMenu1 {
+    height: 40px;
+    width: 40px;
+    padding: 0;
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+.menu li a:hover {
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+
+/*Menú migas de pan*/
+
+#migas ul {
+    padding: 10px 16px;
+    list-style: none;
+    border-bottom: 3px solid white;
+    margin: 0;
+}
+
+#migas ul li {
+    display: inline;
+    list-style: none;
+    text-decoration: none;
+}
+
+#migas li+li:before {
+    padding: 8px;
+    color: white;
+    content: ">";
+}
+
+#migas a {
+    color: white;
+    text-decoration: none;
+}
+
+#migas a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+
+/* MOVILES-----------------------------------------------------------*/
+
+@media (max-width: 480px) {
+    /*Menu en icono*/
+    header label {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        background-color: rgb(31, 151, 115);
+        z-index: 1;
+        width: 40%;
+        margin-left: -100%;
+    }
+    .menu ul {
+        flex-direction: column;
+    }
+    #botonMenu:checked~.menu {
+        margin: 0;
+        transition: all 0.5s;
+    }
+    /*Menu lateral*/
+    .menuContenidos {
+        background-color: rgb(5, 5, 58);
+        ;
+    }
+    .menuContenidos label {
+        display: block;
+    }
+    .logoMenu1 {
+        background-color: white;
+    }
+    .menu1 {
+        position: absolute;
+        background-color: rgb(31, 151, 115);
+        z-index: 1;
+        width: 40%;
+        margin-left: -100%;
+    }
+    .menu1 ul {
+        flex-direction: column;
+    }
+    #botonMenu1:checked~.menu1 {
+        margin: 0;
+        transition: all 0.5s;
+    }
+    /*RESTO DE ELEMENTOS*/
+    main {
+        grid-row: 2;
+        display: grid;
+        grid-template-rows: 20px 70px 1fr 8fr 60px;
+        grid-template-columns: 1;
+        padding: 0;
+        gap: 5px;
+    }
+    #migas {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    h1 {
+        margin-top: 30px;
+        grid-column: 1;
+        grid-row: 2;
+        font-size: 1.3em;
+    }
+    .menuContenidos {
+        grid-column: 1;
+        grid-row: 3;
+        width: 200px;
+        text-decoration: none;
+        color: black;
+    }
+    #frameResultado {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    #resul {
+        grid-column: 1;
+        grid-row: 5;
+        text-align: center;
+    }
+}
+
+
+/* TABLET-----------------------------------------------------------*/
+
+@media(min-width: 481px) and (max-width: 781px) {
+    main {
+        padding: 0;
+        gap: 5px;
+    }
+}
+
+
+/*PC-----------------------------------------------------------*/
+
+@media(min-width: 781px) {
+    main {
+        gap: 20px;
+        padding: 0 20px;
+    }
+}
